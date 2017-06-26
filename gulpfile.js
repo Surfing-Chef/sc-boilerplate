@@ -52,7 +52,7 @@ gulp.task('sassDep', function() {
 // Server Task - Asynchronous browser syncing of assets across multiple devices
 gulp.task('serve', function(){
   browserSync.init({
-    proxy   : "http://localhost/bourbon-wp"
+    proxy   : "http://localhost/tomatoes"
   });
 
   gulp.watch('src/js/**/*.js', ['scripts']);
