@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
     "serve-dev": "live-server builds/development",
     "prod-setup": "mkdirp builds/production/js",
+    "start": "npm run serve-dev",
   },
   "repository": {
     "type": "git",
