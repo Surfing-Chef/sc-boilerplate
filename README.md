@@ -1,7 +1,7 @@
 # **sc-boilerplate** #
 * *version 1.7*  
 
-Basic Sass, Bourbon and Gulp boilerplate.
+A Sass, Bourbon and Gulp build system.
 
 ## **USAGE** ##
 1. Download zipped files.  Customize as desired.  
