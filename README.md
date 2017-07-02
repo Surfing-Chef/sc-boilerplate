@@ -12,5 +12,10 @@ A Sass, Bourbon and NPM Script build system for Single Page HTML builds.
 6. `npm run build` will create a production version (minified, mangled, etc.)  
 
 ## **USAGE** ##
-However this boilerplate is used, ensure the build structure is maintained.  All
-- Create an HTML5 Boilerplate based project from [***here***](https://html5boilerplate.com/)
+- However this boilerplate is used, ensure the build structure is maintained.
+- CSS should be edited in the process/scss directory:  
+  - 0-bourbon-bitters-neat: not to be edited
+  - 1-base: site variables and general layout
+  - 2-layouts: page-specific layouts
+  - 3-modules: specific parts of pages
+- Index.html located in builds/dev is the HTML single-page template.
