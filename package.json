@@ -18,6 +18,11 @@
     "dev:sass-dev": "node-sass --watch --output-style expanded --source-map true process/scss/style.scss --output builds/dev/css",
     "dev:js-transform": "babel process/js/**/*.js --watch --out-file builds/dev/js/script.js --source-maps",
     "build": "npm-run-all  prod:*",
+    "prod:setup": "mkdirp builds/prod/js",
+    "prod:sass-dev": "node-sass --output-style compressed process/scss/style.scss --output builds/prod/css",
+    "prod:js-uglify": "uglifyjs builds/dev/js/script.js --compress --mangle --output builds/prod/js/script.js",
+    "prod:html-minify": "html-minifier --collapse-whitespace builds/dev/index.html > output builds/prod/index.html",
+    "prod:img-compress": "imagemin builds/dev/images/**/*.* --out-dir=builds/prod/img/ --plugin=jpeg-recompress --plugin-pngquant"
   },
   "repository": {
     "type": "git",
