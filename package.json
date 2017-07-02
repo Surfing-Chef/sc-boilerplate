@@ -1,8 +1,8 @@
 {
   "name": "bourbon-chef",
   "version": "1.7.0",
-  "description": "A Sass, Bourbon and NPM Script build system for HTML builds.",
-  "main": "index.php",
+  "description": "A Sass, Bourbon and NPM Script build system for Single Page HTML builds.",
+  "main": "index.html",
   "babel": {
     "presets": [
       "es2015"
