@@ -18,7 +18,7 @@
     "prod:sass-dev": "node-sass --output-style compressed process/scss/style.scss --output builds/prod/css",
     "prod:js-uglify": "uglifyjs builds/dev/js/script.js --compress --mangle --output builds/prod/js/script.js",
     "prod:html-minify": "html-minifier --collapse-whitespace builds/dev/index.html > output builds/prod/index.html",
-    "prod:img-compress": "imagemin builds/dev/images/**/*.* --out-dir=builds/prod/img/ --plugin=jpeg-recompress --plugin-pngquant"
+    "prod:img-compress": "imagemin builds/dev/img/**/*.* --out-dir=builds/prod/img/ --plugin=jpeg-recompress --plugin-pngquant"
   },
   "repository": {
     "type": "git",
