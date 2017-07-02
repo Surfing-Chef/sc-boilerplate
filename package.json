@@ -3,6 +3,7 @@
   "version": "1.7.0",
   "description": "A Sass, Bourbon and Gulp build system",
   "main": "index.js",
+  "description": "A Sass, Bourbon and NPM Script build system for HTML builds.",
   "scripts": {
     "serve-dev": "live-server builds/development",
     "prod-setup": "mkdirp builds/production/js",
