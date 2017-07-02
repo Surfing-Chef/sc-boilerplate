@@ -17,6 +17,7 @@
     "dev:serve-dev": "live-server builds/dev",
     "dev:sass-dev": "node-sass --watch --output-style expanded --source-map true process/scss/style.scss --output builds/dev/css",
     "dev:js-transform": "babel process/js/**/*.js --watch --out-file builds/dev/js/script.js --source-maps",
+    "build": "npm-run-all  prod:*",
   },
   "repository": {
     "type": "git",
