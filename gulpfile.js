@@ -68,6 +68,31 @@ gulp.task('prod:imgMin', ['prod:cleanfolder'], function(){
         .pipe(gulp.dest('builds/prod/img'));
 });
 
+// minify css
+gulp.task('prod:sass', ['prod:cleanfolder'], function() {
+  gulp.src('process/scss/style.scss')
+  .pipe(plumber())
+  .pipe(sass({outputStyle: 'compressed'}))
+  .pipe(gulp.dest('builds/prod/css/'));
+});
+
+// uglify and mangle js
+gulp.task('prod:scripts', ['prod:sass'], function(){
+  gulp.src(['builds/dev/js/**/*.js'])
+  .pipe(plumber())
+  .pipe(uglify())
+  .pipe(gulp.dest('builds/prod/js'));
+});
+
+// copy development files not requiring processing
+gulp.task('prod:copy', ['prod:imgMin'], function(){
+  return gulp.src([
+                  'builds/dev/**/*/',
+                  '!builds/dev/css{,/**}',
+                  '!builds/dev/js{,/**}',
+                  '!builds/dev/img{,/**}'
+                ])
+  .pipe(gulp.dest('./builds/prod'));
 });
 
 // remove unwanted build files and directories
