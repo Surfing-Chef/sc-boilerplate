@@ -96,15 +96,10 @@ gulp.task('prod:copy', ['prod:imgMin'], function(){
 });
 
 // remove unwanted build files and directories
-gulp.task('build:remove', ['build:imgMin'], function(done){
+gulp.task('prod:remove', ['prod:copy'], function(done){
   return del([  // list files and directories to delete
-    './build/gulpfile.js',
-    './build/.git*',
-    './build/node_modules',
-    './build/README.md',
-    './build/scss/',
-    './build/css/',
-    './build/css/*dev*',
+    // list of sneaky files to delete
+    // 'builds/prod/target.xxx'
   ], done);
 });
 
