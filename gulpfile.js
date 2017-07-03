@@ -15,24 +15,24 @@ var gulp        = require('gulp'),
 //////// Tasks used in development environment ////////
 // Scripts Task - tasks related to js
 gulp.task('scripts', function(){
-  gulp.src(['src/js/**/*.js', '!src/js/**/*min.js'])
+  gulp.src(['process/js/**/*.js', '!process/js/**/*min.js'])
   .pipe(plumber())
   .pipe(concat('script.min.js'))
-  .pipe(gulp.dest('src/js'))
+  .pipe(gulp.dest('builds/dev/js'))
   .pipe(uglify())
-  .pipe(gulp.dest('src/js'))
+  .pipe(gulp.dest('builds/dev/js'))
   .pipe(browserSync.stream());
 });
 
 // Sass Task - development css - nested/readable/mapped
 gulp.task('sassDev', function() {
-  gulp.src('src/scss/**/*.scss')
+  gulp.src('process/scss/**/*.scss')
   .pipe(plumber())
   .pipe(sourcemaps.init())
     .pipe(sass({sourceComments: 'map', sourceMap: 'sass', outputStyle: 'expanded'}))
     .pipe(autoprefixer('last 2 versions'))
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('src/css/'))
+  .pipe(gulp.dest('builds./dev/css/'))
   .pipe(browserSync.stream());
 });
 
@@ -44,7 +44,8 @@ gulp.task('sassDep', function() {
     .pipe(sass({sourceComments: 'map', sourceMap: 'sass', outputStyle: 'compressed'}))
     .pipe(autoprefixer('last 2 versions'))
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('./'))
+  .pipe(gulp.dest('builds/dev/')) // into dev root directory
+  .pipe(gulp.dest('builds/dev/css')) // and into dev/css
   .pipe(browserSync.stream());
 });
 
@@ -55,9 +56,9 @@ gulp.task('serve', function(){
     proxy   : "http://localhost/" // update this path to project root
   });
 
-  gulp.watch('src/js/**/*.js', ['scripts']);
-  gulp.watch('src/scss/**/*.scss', ['sassDev']);
-  gulp.watch('src/scss/**/*.scss', ['sassDep']);
+  gulp.watch('process/js/**/*.js', ['scripts']);
+  gulp.watch('process/scss/**/*.scss', ['sassDev']);
+  gulp.watch('process/scss/**/*.scss', ['sassDep']);
   gulp.watch('**/*.html').on('change', browserSync.reload);
   gulp.watch('**/*.php').on('change', browserSync.reload);
 });
