@@ -9,20 +9,21 @@ var gulp        = require('gulp'),
     concat = require('gulp-concat'),
     del = require('del'),
     rename = require('gulp-rename'),
+    babel = require('gulp-babel'),
     imagemin = require('gulp-imagemin');
 
 // DEVELOPMENT TASKS
-//////// Tasks used in development environment ////////
 // Scripts Task - tasks related to js
 gulp.task('scripts', function(){
   gulp.src(['process/js/**/*.js', '!process/js/**/*min.js'])
   .pipe(plumber())
-  .pipe(concat('script.min.js'))
-  .pipe(gulp.dest('builds/dev/js'))
-  .pipe(uglify())
+  .pipe(babel({
+            presets: ['es2015']
+        }))
   .pipe(gulp.dest('builds/dev/js'))
   .pipe(browserSync.stream());
 });
+
 
 // Sass Task - development css - nested/readable/mapped
 gulp.task('sassDev', function() {
