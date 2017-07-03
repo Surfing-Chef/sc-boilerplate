@@ -37,20 +37,6 @@ gulp.task('sassDev', function() {
   .pipe(browserSync.stream());
 });
 
-// Sass Task - deployment css - nested/readable/mapped
-gulp.task('sassDep', function() {
-  gulp.src('src/scss/**/*.scss')
-  .pipe(plumber())
-  .pipe(sourcemaps.init())
-    .pipe(sass({sourceComments: 'map', sourceMap: 'sass', outputStyle: 'compressed'}))
-    .pipe(autoprefixer('last 2 versions'))
-  .pipe(sourcemaps.write())
-  .pipe(gulp.dest('builds/dev/')) // into dev root directory
-  .pipe(gulp.dest('builds/dev/css')) // and into dev/css
-  .pipe(browserSync.stream());
-});
-
-
 // Server Task - Asynchronous browser syncing of assets across multiple devices
 gulp.task('serve', function(){
   browserSync.init({
