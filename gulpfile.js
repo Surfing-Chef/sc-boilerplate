@@ -104,4 +104,4 @@ gulp.task('prod:remove', ['prod:copy'], function(done){
 });
 
 // main build task
-gulp.task('build', ['build:cleanfolder', 'build:copy', 'build:imgMin', 'build:remove']);
+gulp.task('prod', ['prod:cleanfolder', 'prod:imgMin', 'prod:sass', 'prod:scripts', 'prod:copy', 'prod:remove']);
