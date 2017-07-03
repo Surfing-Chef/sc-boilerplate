@@ -61,21 +61,13 @@ gulp.task('prod:cleanfolder', function(){
   ]);
 });
 
-// create build directory for all theme deployment files
-gulp.task('build:copy', ['build:cleanfolder'], function(){
-  return gulp.src([
-                  './**/*/',
-                  '!./src/images/**/*',
-                  '!./build'
-                ])
-  .pipe(gulp.dest('./build/'));
+// minimize images
+gulp.task('prod:imgMin', ['prod:cleanfolder'], function(){
+    return gulp.src('dev/img/**/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('builds/prod/img'));
 });
 
-// minimize images in deployment directory
-gulp.task('build:imgMin', ['build:copy'], function(){
-    return gulp.src('./src/images/**/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('./build/src/images'));
 });
 
 // remove unwanted build files and directories
