@@ -52,12 +52,12 @@ gulp.task('serve', function(){
 // Default Task
 gulp.task('default', ['serve']);
 
-////////////////////////////////////////////////////////
-// DEPLOYMENT TASKS
-//////// Tasks used to build deployment package ////////
-gulp.task('build:cleanfolder', function(){
+
+// PRODUCTIONS TASKS
+// delete previous production build
+gulp.task('prod:cleanfolder', function(){
   return del([
-    './build/**/*'
+    'builds/prod/**/*'
   ]);
 });
 
