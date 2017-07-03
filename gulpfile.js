@@ -33,19 +33,18 @@ gulp.task('sassDev', function() {
     .pipe(sass({sourceComments: 'map', sourceMap: 'sass', outputStyle: 'expanded'}))
     .pipe(autoprefixer('last 2 versions'))
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('builds./dev/css/'))
+  .pipe(gulp.dest('builds/dev/css/'))
   .pipe(browserSync.stream());
 });
 
 // Server Task - Asynchronous browser syncing of assets across multiple devices
 gulp.task('serve', function(){
   browserSync.init({
-    proxy   : "http://localhost/" // update this path to project root
+    proxy   : "http://localhost/app-root/app-file" // update this path to project root
   });
 
   gulp.watch('process/js/**/*.js', ['scripts']);
   gulp.watch('process/scss/**/*.scss', ['sassDev']);
-  gulp.watch('process/scss/**/*.scss', ['sassDep']);
   gulp.watch('**/*.html').on('change', browserSync.reload);
   gulp.watch('**/*.php').on('change', browserSync.reload);
 });
