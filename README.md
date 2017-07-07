@@ -1,7 +1,7 @@
 # **sc-boilerplate** #
 * *version 1.7.1*  
 
-A Sass, Bourbon and NPM Script build system.
+A Sass, Bourbon and Gulp build system.
 
 ## **INSTALL** ##
 1. Download zipped files.  Customize as desired.
