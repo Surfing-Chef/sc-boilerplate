@@ -28,6 +28,10 @@ A Sass, Bourbon and Gulp build system.
 │   │   └───all.other.files
 │   └───prod
 │       └───generated.production.files
+│
+├───node_modules
+│   └───npm.package.files
+│
 └───process
     ├───js
     └───scss
@@ -35,6 +39,7 @@ A Sass, Bourbon and Gulp build system.
         ├───1-base
         ├───2-layouts
         └───3-modules
+
 ```
 - Development and production tasks will not execute properly if the following points are not adhered to:
 - **CSS** should be edited in the ***process/scss*** directory:  
