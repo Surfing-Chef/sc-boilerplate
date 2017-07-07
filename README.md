@@ -14,7 +14,28 @@ A Sass, Bourbon and Gulp build system.
 8. A `gulp prod` will create a production version of a project.  
 
 ## **USAGE** ##
-- **ENSURE THE PROJECT FILE STRUCTURE IS MAINTAINED**
+- **ENSURE THE PROJECT FILE STRUCTURE IS MAINTAINED:**  
+```
+│   .gitignore
+│   gulpfile.js
+│   package.json
+│   README.md
+│
+├───builds
+│   ├───dev
+│   │   ├───css
+│   │   ├───img
+│   │   └───all.other.files
+│   └───prod
+│       └───generated.production.files
+└───process
+    ├───js
+    └───scss
+        ├───0-bourbon
+        ├───1-base
+        ├───2-layouts
+        └───3-modules
+```
 - Development and production tasks will not execute properly if the following points are not adhered to:
 - **CSS** should be edited in the ***process/scss*** directory:  
   - ***0-bourbon-bitters-neat***: NO EDITS
