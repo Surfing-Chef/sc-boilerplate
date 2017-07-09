@@ -7,16 +7,34 @@ An Underscores based WordPress theme with a Gulp build system implementing Sass 
 - [x] Rewrite Documentation - ONGOING
 - [x] Restructure directory system to be WordPress/underscores/user friendly
 - [x] create preprocess directory: process/sass, process/js, process/img
-- [x] development: process process/sass, process/js, process/img into img/, js/, style.css
-- [ ] build: process process/sass, process/js, process/img and *themefi.les* into build/img/, build/js/, build/style.css and build/*themefi.les* 
-- [ ] Update gulpfile.js WordPress/underscores friendly
+- [x] development: process process/sass, process/js, process/img into img/, js/, style.css  
+- [x] build: process process/sass, process/js, process/img and *themefi.les* into build/img/, build/js/, build/style.css and build/*themefi.les*
+- [x] Update gulpfile.js WordPress/underscores friendly
 - [ ] Update **INSTALL** and **USAGE**
 
 ## CHANGELOG ##
 > [![GitHub version](https://badge.fury.io/gh/surfing-chef%2Fsc-bourbon-boilerplate.svg)](https://badge.fury.io/gh/surfing-chef%2Fsc-bourbon-boilerplate)
+
 - added Underscores generated theme to use a base.  The repo will eventually be a template to drop a custom Underscores theme into, not a ready made Underscores template.
 - copied **Bourbon** package to **sass** directory
 - updated ***style.scss*** in **sass** directory
+- do a five-step find and replace on the name in all the templates:
+
+  1. Search for `'_s'` (inside single quotations) to capture the text domain.
+  2. Search for `_s_` to capture all the function names.
+  3. Search for `Text Domain: _s` in style.css.
+  4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks.
+  5. Search for `_s-` to capture prefixed handles.
+
+OR
+
+1. Search for: `'_s'` and replace with: `'your-theme-name'`
+2. Search for: `_s_` and replace with: `your_theme_name_`
+3. Search for: `Text Domain: _s` and replace with: `Text Domain: your-theme-name` in style.css.
+4. Search for: <code>&nbsp;_s</code> and replace with: <code>&nbsp;Your-Theme-Name</code>
+5. Search for: `_s-` and replace with: `your-theme-name-`
+
+Then, update the stylesheet header in `style.css` and the links in `footer.php` with your own information. Next, update or delete this readme.
 
 
 
