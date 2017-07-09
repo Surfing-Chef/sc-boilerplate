@@ -6,11 +6,17 @@ An Underscores based WordPress theme with a Gulp build system implementing Sass 
 ## TASKLIST ##
 - [x] Rewrite Documentation - ONGOING
 - [ ] Restructure directory system to be WordPress/underscores/user friendly
+- [ ] create process/sass, process/js, process/img
+- [ ] development: process process/sass, process/js, process/img into img/, js/, style.css
+- [ ] build: process process/sass, process/js, process/img and *themefi.les* into build/img/, build/js/, build/style.css and build/*themefi.les* 
 - [ ] Update gulpfile.js WordPress/underscores friendly
 - [ ] Update **INSTALL** and **USAGE**
 
 ## CHANGELOG ##
+> [![GitHub version](https://badge.fury.io/gh/surfing-chef%2Fsc-bourbon-boilerplate.svg)](https://badge.fury.io/gh/surfing-chef%2Fsc-bourbon-boilerplate)
 - added Underscores generated theme to use a base.  The repo will eventually be a template to drop a custom Underscores theme into, not a ready made Underscores template.
+- copied **Bourbon** package to **sass** directory
+- updated ***style.scss*** in **sass** directory
 
 
 
