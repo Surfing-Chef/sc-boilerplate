@@ -20,6 +20,11 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
 
+/*!
+- THIS IS AN AUTO GENERATED STYLESHEET FROM SCSS TO CSS.
+- ALL EDITS WILL BE OVERWRITTEN BY GULPFILE.JS WHEN USING THE SYSTEM.
+*/
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -44,11 +49,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
-
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-@import "normalize";
+@import "bourbon/dir_bourbon";
 
 /*--------------------------------------------------------------
 # Typography
