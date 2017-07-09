@@ -3,6 +3,40 @@
 
 An Underscores based WordPress theme with a Gulp build system implementing Sass and Bourbon.
 
+## **INSTALL** ##
+1. Download zipped files from ***[here](https://github.com/Surfing-Chef/sc-bourbon-boilerplate/tree/Underscores)*** if you haven't already.
+2. Unzip into new theme folder: `wp-content/themes/your-theme-name`.
+3. Open a new command line window, navigate into the new folder.
+4. If ***[npm-check-updates](https://www.npmjs.com/package/npm-check-updates)*** is installed, run `ncu -u` to update project packages.
+5. Install the Node packages, run a `npm install` command from the command line.
+6. do a five-step find and replace on the name in all the templates:
+
+  1. Search for `'_s'` (inside single quotations) to capture the text domain.
+  2. Search for `_s_` to capture all the function names.
+  3. Search for `Text Domain: _s` in style.css.
+  4. Search for <code>&nbsp;\_s</code> (with a space before it) to capture DocBlocks.
+  5. Search for `_s-` to capture prefixed handles.
+
+  OR
+
+  1. Search for: `'_s'` and replace with: `'your-theme-name'`
+  2. Search for: `_s_` and replace with: `your_theme_name_`
+  3. Search for: `Text Domain: _s` and replace with: `Text Domain: your-theme-name` in style.css.
+  4. Search for: <code>&nbsp;\_s</code> and replace with: <code>&nbsp;Your-Theme-Name</code>
+  5. Search for: `_s-` and replace with: `your-theme-name-`
+
+7. Update the stylesheet header in `process/sass/style.scss` and the links in `footer.php` with your own information.
+8. Edit gulpfile.js line 43:  
+```console
+# from:
+proxy   : "http://localhost/path/to/root"
+# to
+proxy   : "http://Your-WordPress-Installation-Root"
+```
+
+9. A `gulp` command will start the development tasks.
+10. A `gulp prod` will create a production version of a project.  
+
 ## TASKLIST ##
 - [x] Rewrite Documentation - ONGOING
 - [x] Restructure directory system to be WordPress/underscores/user friendly
@@ -34,7 +68,7 @@ OR
 4. Search for: <code>&nbsp;_s</code> and replace with: <code>&nbsp;Your-Theme-Name</code>
 5. Search for: `_s-` and replace with: `your-theme-name-`
 
-Then, update the stylesheet header in `style.css` and the links in `footer.php` with your own information. Next, update or delete this readme.
+Then, update the stylesheet header in `style.css` and the links in `footer.php` with your own information. Next, update or delete this readme.***
 
 
 
@@ -64,15 +98,7 @@ Then, update the stylesheet header in `style.css` and the links in `footer.php` 
 
 
 
-## **INSTALL** ##
-1. Download zipped files.  Customize as desired.
-2. Unzip to desired location.
-3. In a new command line window, navigate to the new folder root.
-4. If [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) is installed, run `ncu -u` to update project packages.
-5. Run a `npm install` command to install project packages.
-6. Edit *browserSync proxy url* to match *local project url*
-7. A `gulp` command will start the development tasks.
-8. A `gulp prod` will create a production version of a project.  
+
 
 ## **USAGE** ##
 - **ENSURE THE PROJECT FILE STRUCTURE IS MAINTAINED:**  
