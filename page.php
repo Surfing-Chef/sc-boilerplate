@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package tuffbeans
+ * @package _s
  */
 
 get_header(); ?>

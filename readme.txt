@@ -1,4 +1,4 @@
-=== tuffbeans ===
+=== _s ===
 
 Contributors: automattic
 Tags:
@@ -9,11 +9,11 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called tuffbeans.
+A starter theme called _s.
 
 == Description ==
 
-A West Coast Coffeehouse WordPress Theme
+Description
 
 == Installation ==
 
@@ -25,7 +25,7 @@ A West Coast Coffeehouse WordPress Theme
 
 = Does this theme support any plugins? =
 
-tuffbeans includes support for Infinite Scroll in Jetpack.
+_s includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
