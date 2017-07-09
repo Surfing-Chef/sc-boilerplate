@@ -9,6 +9,37 @@ An Underscores based WordPress theme with a Gulp build system implementing Sass 
 - [ ] Update gulpfile.js WordPress/underscores friendly
 - [ ] Update **INSTALL** and **USAGE**
 
+## CHANGELOG ##
+- added Underscores generated theme to use a base.  The repo will eventually be a template to drop a custom Underscores theme into, not a ready made underscores template.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## **INSTALL** ##
 1. Download zipped files.  Customize as desired.
 2. Unzip to desired location.
