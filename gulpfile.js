@@ -20,7 +20,7 @@ gulp.task('scripts', function(){
   .pipe(babel({
             presets: ['es2015']
         }))
-  .pipe(gulp.dest('builds/dev/js'))
+  .pipe(gulp.dest('./js'))
   .pipe(browserSync.stream());
 });
 
@@ -33,7 +33,7 @@ gulp.task('sassDev', function() {
     .pipe(sass({sourceComments: 'map', sourceMap: 'sass', outputStyle: 'expanded'}))
     .pipe(autoprefixer('last 2 versions'))
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('builds/dev/css/'))
+  .pipe(gulp.dest('./'))
   .pipe(browserSync.stream());
 });
 
