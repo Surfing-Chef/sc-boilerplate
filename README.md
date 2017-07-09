@@ -3,6 +3,12 @@
 
 An Underscores based WordPress theme with a Gulp build system implementing Sass and Bourbon.
 
+## TASKLIST ##
+- [x] Rewrite Documentation - ONGOING
+- [ ] Restructure directory system to be WordPress/underscores/user friendly
+- [ ] Update gulpfile.js WordPress/underscores friendly
+- [ ] Update **INSTALL** and **USAGE**
+
 ## **INSTALL** ##
 1. Download zipped files.  Customize as desired.
 2. Unzip to desired location.
