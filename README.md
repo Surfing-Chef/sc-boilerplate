@@ -9,6 +9,20 @@ An Underscores based WordPress theme with a Gulp build system implementing Sass 
 3. Open a new command line window, navigate into the new folder.
 4. Run `ncu -u` to update project packages, if ***[npm-check-updates](https://www.npmjs.com/package/npm-check-updates)*** is installed.
 5. Install the Node packages, run a `npm install` command from the command line.
+6. Initialize a Git repository:
+
+  ```console
+  >git init
+  >git add .
+  >git commit -m"Initial commit"
+  ```  
+7. Link repo to GitHub:
+
+  ```console
+  >git remote add origin https://github.com/Your-GitHub-Account/your-repo-name.git
+  >git push -u origin master
+  ```  
+
 6. Do a five-step find and replace on the name in all the templates:
 
   1. Search for `'_s'` (inside single quotations) to capture the text domain.
@@ -31,7 +45,7 @@ An Underscores based WordPress theme with a Gulp build system implementing Sass 
 # from:
 proxy   : "http://localhost/path/to/root"
 # to
-proxy   : "http://Your-WordPress-Installation-Root"
+proxy   : "http://Your-WordPress-Development-Root"
 ```
 
 9. A `gulp` command will start the development tasks.
