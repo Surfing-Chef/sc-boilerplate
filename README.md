@@ -1,5 +1,5 @@
-# **sc-boilerplate** #
-* *version 1.8.0*  
+# **sc-boilerplate** #  
+[![GitHub version](https://badge.fury.io/gh/surfing-chef%2Fsc-bourbon-boilerplate.svg)](https://badge.fury.io/gh/surfing-chef%2Fsc-bourbon-boilerplate) *1.8.0*  
 
 An Underscores based WordPress theme with a Gulp build system implementing Sass and Bourbon.
 
@@ -23,7 +23,7 @@ An Underscores based WordPress theme with a Gulp build system implementing Sass 
   >git push -u origin master
   ```  
 
-6. Do a five-step find and replace on the name in all the templates:
+8. Do a five-step find and replace on the name in all the templates:
 
   1. Search for `'_s'` (inside single quotations) to capture the text domain.
   2. Search for `_s_` to capture all the function names.
@@ -39,8 +39,8 @@ An Underscores based WordPress theme with a Gulp build system implementing Sass 
   4. Search for: <code>&nbsp;\_s</code> and replace with: <code>&nbsp;Your-Theme-Name</code>
   5. Search for: `_s-` and replace with: `your-theme-name-`
 
-7. Update the stylesheet header in `process/sass/style.scss` and the links in `footer.php` with your own information.
-8. Edit gulpfile.js line 43:  
+9. Update the stylesheet header in `process/sass/style.scss` and the links in `footer.php` with your own information.
+10. Edit gulpfile.js line 43:  
 ```console
 # from:
 proxy   : "http://localhost/path/to/root"
@@ -48,71 +48,8 @@ proxy   : "http://localhost/path/to/root"
 proxy   : "http://Your-WordPress-Development-Root"
 ```
 
-9. A `gulp` command will start the development tasks.
-10. A `gulp prod` will create a production version of a project.  
-
-## TASKLIST ##
-- [x] Rewrite Documentation - ONGOING
-- [x] Restructure directory system to be WordPress/underscores/user friendly
-- [x] create preprocess directory: process/sass, process/js, process/img
-- [x] development: process process/sass, process/js, process/img into img/, js/, style.css  
-- [x] build: process process/sass, process/js, process/img and *themefi.les* into build/img/, build/js/, build/style.css and build/*themefi.les*
-- [x] Update gulpfile.js WordPress/underscores friendly
-- [ ] Update **INSTALL** and **USAGE**
-
-## CHANGELOG ##
-> [![GitHub version](https://badge.fury.io/gh/surfing-chef%2Fsc-bourbon-boilerplate.svg)](https://badge.fury.io/gh/surfing-chef%2Fsc-bourbon-boilerplate)
-
-- added Underscores generated theme to use a base.  The repo will eventually be a template to drop a custom Underscores theme into, not a ready made Underscores template.
-- copied **Bourbon** package to **sass** directory
-- updated ***style.scss*** in **sass** directory
-- do a five-step find and replace on the name in all the templates:
-
-  1. Search for `'_s'` (inside single quotations) to capture the text domain.
-  2. Search for `_s_` to capture all the function names.
-  3. Search for `Text Domain: _s` in style.css.
-  4. Search for <code>&nbsp;\_s</code> (with a space before it) to capture DocBlocks.
-  5. Search for `_s-` to capture prefixed handles.
-
-OR
-
-1. Search for: `'_s'` and replace with: `'your-theme-name'`
-2. Search for: `_s_` and replace with: `your_theme_name_`
-3. Search for: `Text Domain: _s` and replace with: `Text Domain: your-theme-name` in style.css.
-4. Search for: <code>&nbsp;\_s</code> and replace with: <code>&nbsp;Your-Theme-Name</code>
-5. Search for: `_s-` and replace with: `your-theme-name-`
-
-Then, update the stylesheet header in `style.css` and the links in `footer.php` with your own information. Next, update or delete this readme.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+11. A `gulp` command will start the development tasks.
+12. A `gulp prod` will create a production version of a project.  
 
 ## **USAGE** ##
 - **ENSURE THE PROJECT FILE STRUCTURE IS MAINTAINED:**  
@@ -157,3 +94,17 @@ Then, update the stylesheet header in `style.css` and the links in `footer.php` 
 - **PHP** files can be authored and edited in the ***./*** root directory.
 - Files not ( labelled ) above are standard WordPress files and folders and should be edited as required.
 - Any files placed in the ***./prod*** folder will be overwritten when `gulp prod` is executed.
+
+## **TASKLIST** ##
+- [x] Rewrite Documentation - ONGOING
+- [x] Restructure directory system to be WordPress/underscores/user friendly
+- [x] create preprocess directory: process/sass, process/js, process/img
+- [x] development: process process/sass, process/js, process/img into img/, js/, style.css  
+- [x] build: process process/sass, process/js, process/img and *themefi.les* into build/img/, build/js/, build/style.css and build/*themefi.les*
+- [x] Update gulpfile.js WordPress/underscores friendly
+- [x] Update **INSTALL** and **USAGE**
+
+## **CHANGELOG** ##
+- added Underscores generated theme to use a base.  The repo will eventually be a template to drop a custom Underscores theme into, not a ready made Underscores template.
+- copied **Bourbon** package to **sass** directory
+- updated ***style.scss*** in **sass** directory
