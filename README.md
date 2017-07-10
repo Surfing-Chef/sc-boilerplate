@@ -1,5 +1,5 @@
 # **sc-boilerplate** #
-[![GitHub version](https://badge.fury.io/gh/surfing-chef%2Fsc-bourbon-boilerplate.svg)](https://badge.fury.io/gh/surfing-chef%2Fsc-bourbon-boilerplate) *1.8.1*    
+[![GitHub version](https://badge.fury.io/gh/surfing-chef%2Fsc-bourbon-boilerplate.svg)](https://badge.fury.io/gh/surfing-chef%2Fsc-bourbon-boilerplate) *1.8.1 - HTML5*    
 
 An HTML Boilerplate with a Gulp build system implementing Sass and Bourbon.
 
@@ -38,25 +38,36 @@ An HTML Boilerplate with a Gulp build system implementing Sass and Bourbon.
 - **ENSURE THE PROJECT FILE STRUCTURE IS MAINTAINED:**  
 
 ```
-│   .gitignore
-│   gulpfile.js
-│   package.json
-│   README.md
+│   .gitignore              ( git files )
+│   gulpfile.js             ( Gulp Build System Definitions )
+│   package.json            ( Node Package Definitions )
+│   README.md               ( Repo/Dev documentation )
 │
-├───builds
-│   ├───dev
-│   │   ├───css
-│   │   ├───img
-│   │   └───all.other.files
-│   └───prod
-│       └───generated.production.files
+├───.git                    ( git files )
 │
-├───node_modules
-│   └───npm.package.files
+├───builds    
+│   ├───dev                 ( development build files )
+│   │   ├───css             ( processed from process folder )
+│   │   ├───img             ( processed from process folder )
+│   │   └───js              ( processed from process folder )
+│   │   .editorconfig
+│   │   .gitignore
+│   │   .htaccess
+│   │   404.html
+│   │   browserconfig.xml
+│   │   crossdomain.xml
+│   │   humans.txt
+│   │   index.html
+│   │   LICENSE.txt
+│   │   robots.txt
+│   ├───docs                ( HTML5Boilerplate Documentation )
+│   └───prod                ( production build files )
+│
+├───node_modules            ( Node Package Dependencies )
 │
 └───process
-    ├───js
-    └───scss
+    ├───js                  ( processed to builds/dev folder )
+    └───scss                ( processed to builds/dev folder )
         ├───0-bourbon
         ├───1-base
         ├───2-layouts
@@ -65,11 +76,11 @@ An HTML Boilerplate with a Gulp build system implementing Sass and Bourbon.
 ```
 - Development and production tasks will not execute properly if the following points are not adhered to:
 - **CSS** should be edited in the ***process/scss*** directory:  
-  - ***0-bourbon-bitters-neat***: NO EDITS
+  - ***0-bourbon***: NO EDITS
   - ***1-base***: EDITS - site variables and general layout
   - ***2-layouts***: EDITS - page-specific layouts
   - ***3-modules***: EDITS - specific parts of pages
-- **Javascript and Jquery** should be authored in the ***process/js*** folder.
+- **Javascript and Jquery** scripts should be authored in the ***process/js*** folder.
 - **Image files** should be placed in the ***builds/dev/img*** folder.
 - **PHP** and **HTML** files should be authored in the ***builds/dev*** folder.
 - Any files placed in the ***builds/prod*** folder will be overwritten when `gulp prod` is executed.
