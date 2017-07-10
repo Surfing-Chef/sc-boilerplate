@@ -30,7 +30,7 @@ An Underscores based WordPress theme with a Gulp build system implementing Sass 
   3. Search for `Text Domain: _s` in style.css.
   4. Search for <code>&nbsp;\_s</code> (with a space before it) to capture DocBlocks.
   5. Search for `_s-` to capture prefixed handles.
-  6. Search for `@package _s` to capture template package definitions.
+  6. Search for `@package tuffbeans` to capture template package definitions.
 
   OR
 
@@ -39,7 +39,7 @@ An Underscores based WordPress theme with a Gulp build system implementing Sass 
   3. Search for: `Text Domain: _s` and replace with: `Text Domain: your-theme-name` in style.css.
   4. Search for: <code>&nbsp;\_s</code> and replace with: <code>&nbsp;Your-Theme-Name</code>
   5. Search for: `_s-` and replace with: `your-theme-name-`
-  6. Search for `@package _s` and replace with: `@package your-theme-name-`
+  6. Search for `@package tuffbeans` and replace with: `@package your-theme-name-`
 
 9. Update the stylesheet header in `process/sass/style.scss` and the links in `footer.php` with your own information.
 10. Edit gulpfile.js line 43:  
