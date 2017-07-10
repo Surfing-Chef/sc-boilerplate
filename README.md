@@ -1,20 +1,42 @@
 # **sc-boilerplate** #
-* *version 1.7.1*  
+[![GitHub version](https://badge.fury.io/gh/surfing-chef%2Fsc-bourbon-boilerplate.svg)](https://badge.fury.io/gh/surfing-chef%2Fsc-bourbon-boilerplate) *1.8.1*    
 
 An HTML Boilerplate with a Gulp build system implementing Sass and Bourbon.
 
 ## **INSTALL** ##
-1. Download zipped files.  Customize as desired.
-2. Unzip to desired location.
-3. In a new command line window, navigate to the new folder root.
-4. If [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) is installed, run `ncu -u` to update project packages.
-5. Run a `npm install` command to install project packages.
-6. Edit *browserSync proxy url* to match *local project url*
-7. A `gulp` command will start the development tasks.
-8. A `gulp prod` will create a production version of a project.  
+- [ ] Download zipped files from ***[here](https://github.com/Surfing-Chef/sc-bourbon-boilerplate/tree/HTML5)*** if you haven't already.
+- [ ]Unzip into a new folder.
+- [ ]Edit gulpfile.js line 43:
+
+  ```console
+  # from:
+  proxy   : "http://localhost/path/to/root"
+  # to
+  proxy   : "http://Your-WordPress-Development-Root"
+  ```
+- [ ]Open a new command line window, navigate into the new folder.
+- [ ]Run `ncu -u` to update project packages, if ***[npm-check-updates](https://www.npmjs.com/package/npm-check-updates)*** is installed.
+- [ ]Install the Node packages, run a `npm install` command from the command line.
+- [ ]Initialize a Git repository:
+
+  ```console
+  >git init
+  >git add .
+  >git commit -m"Initial commit"
+  ```  
+- [ ]Link repo to GitHub:
+
+  ```console
+  >git remote add origin https://github.com/Your-GitHub-Account/your-repo-name.git
+  >git push -u origin master
+  ```  
+
+- [ ]A `gulp` command will start the development tasks.
+- [ ]A `gulp prod` will create a production version of a project.  
 
 ## **USAGE** ##
 - **ENSURE THE PROJECT FILE STRUCTURE IS MAINTAINED:**  
+
 ```
 │   .gitignore
 │   gulpfile.js
