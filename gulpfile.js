@@ -40,7 +40,7 @@ gulp.task('sassDev', function() {
 // Server Task - Asynchronous browser syncing of assets across multiple devices
 gulp.task('serve', function(){
   browserSync.init({
-    proxy   : "http://localhost/path/to/root" // update this path to project root
+    proxy   : "http://localhost/tuffPress" // update this path to project root
   });
 
   gulp.watch('process/js/**/*.js', ['scripts']);
