@@ -71,7 +71,7 @@ proxy   : "http://Your-WordPress-Development-Root"
   1. Search for `'_s'` (inside single quotations) to capture the text domain.
   2. Search for `_s_` to capture all the function names.
   3. Search for `Text Domain: _s` in style.css.
-  4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks.
+  4. Search for <code>&nbsp;\_s</code> (with a space before it) to capture DocBlocks.
   5. Search for `_s-` to capture prefixed handles.
 
 OR
@@ -79,10 +79,10 @@ OR
 1. Search for: `'_s'` and replace with: `'your-theme-name'`
 2. Search for: `_s_` and replace with: `your_theme_name_`
 3. Search for: `Text Domain: _s` and replace with: `Text Domain: your-theme-name` in style.css.
-4. Search for: <code>&nbsp;_s</code> and replace with: <code>&nbsp;Your-Theme-Name</code>
+4. Search for: <code>&nbsp;\_s</code> and replace with: <code>&nbsp;Your-Theme-Name</code>
 5. Search for: `_s-` and replace with: `your-theme-name-`
 
-Then, update the stylesheet header in `style.css` and the links in `footer.php` with your own information. Next, update or delete this readme.***
+Then, update the stylesheet header in `style.css` and the links in `footer.php` with your own information. Next, update or delete this readme.
 
 
 
@@ -116,39 +116,44 @@ Then, update the stylesheet header in `style.css` and the links in `footer.php` 
 
 ## **USAGE** ##
 - **ENSURE THE PROJECT FILE STRUCTURE IS MAINTAINED:**  
-```
-│   .gitignore
-│   gulpfile.js
-│   package.json
-│   README.md
-│
-├───builds
-│   ├───dev
-│   │   ├───css
-│   │   ├───img
-│   │   └───all.other.files
-│   └───prod
-│       └───generated.production.files
-│
-├───node_modules
-│   └───npm.package.files
-│
-└───process
-    ├───js
-    └───scss
-        ├───0-bourbon
-        ├───1-base
-        ├───2-layouts
-        └───3-modules
 
 ```
-- Development and production tasks will not execute properly if the following points are not adhered to:
-- **CSS** should be edited in the ***process/scss*** directory:  
-  - ***0-bourbon-bitters-neat***: NO EDITS
-  - ***1-base***: EDITS - site variables and general layout
-  - ***2-layouts***: EDITS - page-specific layouts
-  - ***3-modules***: EDITS - specific parts of pages
-- **Javascript and Jquery** should be authored in the ***process/js*** folder.
-- **Image files** should be placed in the ***builds/dev/img*** folder.
-- **PHP** and **HTML** files should be authored in the ***builds/dev*** folder.
-- Any files placed in the ***builds/prod*** folder will be overwritten when `gulp prod` is executed.
+├───.git               ( git files )
+├───img                ( image files )
+├───inc                ( WordPress )
+├───js                 ( dev files: gulp processed )
+├───languages          
+├───layouts             
+├───process            ( dev files: to be gulp processed )
+├───prod               ( production ready folder )
+├───template-parts
+│
+│   .gitignore         ( git files )
+│   404.php
+│   archive.php
+│   comments.php
+│   footer.php
+│   functions.php
+│   gulpfile.js         ( gulp workflow definitions )
+│   header.php
+│   index.php
+│   LICENSE
+│   package.json        ( node packages )
+│   page.php
+│   phpcs.xml.dist
+│   README.md           ( Repo/Dev documentation )
+│   rtl.css
+│   screenshot.png
+│   search.php
+│   sidebar.php
+│   single.php
+│   style.css           ( dev file: gulp processed )
+
+```
+- **CSS** is to be edited in the ***./process/sass*** directory:  
+  - DO NOT EDIT ***bourbon-bitters-neat*** files  
+- **javascript and jQuery** scripts should be authored in the ***./process/js*** folder.
+- **Image files** should be placed in the ***./img*** folder.
+- **PHP** files can be authored and edited in the ***./*** root directory.
+- Files not ( labelled ) above are standard WordPress files and folders and should be edited as required.
+- Any files placed in the ***./prod*** folder will be overwritten when `gulp prod` is executed.
