@@ -1,16 +1,16 @@
 // REQUIRED
-var gulp        = require('gulp'),
-    sass        = require('gulp-sass'),
-    browserSync = require('browser-sync').create(),
-    uglify = require('gulp-uglify'),
-    plumber = require('gulp-plumber'),
-    autoprefixer = require('gulp-autoprefixer'),
-    sourcemaps  = require('gulp-sourcemaps'),
-    concat = require('gulp-concat'),
-    del = require('del'),
-    rename = require('gulp-rename'),
-    babel = require('gulp-babel'),
-    imagemin = require('gulp-imagemin');
+var gulp          = require('gulp'),
+    sass          = require('gulp-sass'),
+    browserSync   = require('browser-sync').create(),
+    uglify        = require('gulp-uglify'),
+    plumber       = require('gulp-plumber'),
+    autoprefixer  = require('gulp-autoprefixer'),
+    sourcemaps    = require('gulp-sourcemaps'),
+    concat        = require('gulp-concat'),
+    del           = require('del'),
+    rename        = require('gulp-rename'),
+    babel         = require('gulp-babel'),
+    imagemin      = require('gulp-imagemin');
 
 // DEVELOPMENT TASKS
 // Scripts Task - tasks related to js
