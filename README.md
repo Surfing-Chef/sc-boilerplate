@@ -1,7 +1,7 @@
 # **sc-boilerplate** #
 * *version 1.7.1*  
 
-A Sass, Bourbon and Gulp build system.
+An HTML Boilerplate with a Gulp build system implementing Sass and Bourbon.
 
 ## **INSTALL** ##
 1. Download zipped files.  Customize as desired.
